@@ -15,13 +15,13 @@
                         '<polyline points="17 2 12 7 7 2" stroke="currentColor"/>' +
                     '</svg>' +
                 '</div>' +
-                '<div class="menu__text">Фільми 18+</div>' +
+                '<div class="menu__text">Комедії (Тест)</div>' +
             '</li>');
 
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
-                    url: 'discover/movie?with_genres=10749&sort_by=popularity.desc',
-                    title: 'Фільми 18+',
+                    url: 'discover/movie?with_genres=35&sort_by=popularity.desc',
+                    title: 'Комедії',
                     component: 'category_full',
                     source: 'tmdb',
                     card_type: 'movie',
