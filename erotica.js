@@ -20,14 +20,12 @@
 
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
+                    url: 'discover/movie?with_keywords=738|155477|158713|267122|282903&sort_by=popularity.desc',
                     title: 'Фільми 18+',
                     component: 'category_full',
                     source: 'tmdb',
                     card_type: 'movie',
-                    page: 1,
-                    url: function (params) {
-                        return Lampa.TMDB.api('discover/movie?with_keywords=738|155477|158713|267122|282903&sort_by=popularity.desc&language=uk-UA&page=' + params.page);
-                    }
+                    page: 1
                 });
             });
 
