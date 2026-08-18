@@ -20,12 +20,14 @@
 
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
-                    url: 'discover/movie?with_genres=10749',
                     title: 'Фільми 18+',
                     component: 'category_full',
                     source: 'tmdb',
                     card_type: 'movie',
-                    page: 1
+                    page: 1,
+                    url: function (params) {
+                        return Lampa.TMDB.api('discover/movie?with_keywords=910|738|3260|3456|6373|11534|9838|33451|155535|158713|186071|192188|208433|267122|282903&sort_by=popularity.desc&page=' + params.page);
+                    }
                 });
             });
 
