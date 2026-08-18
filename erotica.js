@@ -21,14 +21,10 @@
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
                     title: 'Фільми 18+',
-                    component: 'category_full',
+                    component: 'category',
                     source: 'tmdb',
                     card_type: 'movie',
-                    page: 1,
-                    getData: function (params, oncomplite, onerror) {
-                        var url = 'discover/movie?with_keywords=9840,738,155477,158713,267122,282903&sort_by=popularity.desc&page=' + params.page;
-                        Lampa.TMDB.get(url, {}, oncomplite, onerror);
-                    }
+                    url: 'discover/movie?with_keywords=9840'
                 });
             });
 
