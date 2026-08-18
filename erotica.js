@@ -20,12 +20,14 @@
 
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
-                    url: 'discover/movie?with_keywords=9840&sort_by=popularity.desc',
                     title: 'Фільми 18+',
                     component: 'category_full',
                     source: 'tmdb',
                     card_type: 'movie',
-                    page: 1
+                    page: 1,
+                    url: function (params) {
+                        return 'discover/movie?with_keywords=9840,738,155477,158713,267122,282903&sort_by=popularity.desc&page=' + params.page;
+                    }
                 });
             });
 
