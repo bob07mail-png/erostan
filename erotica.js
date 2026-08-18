@@ -20,10 +20,10 @@
 
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
-                    url: 'discover/movie?with_genres=35&sort_by=popularity.desc',
                     title: 'Комедії',
                     component: 'category_full',
                     source: 'tmdb',
+                    genres: '35',
                     card_type: 'movie',
                     page: 1
                 });
