@@ -19,10 +19,11 @@
 
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
+                    url: 'discover/movie?with_genres=10749&include_adult=true&sort_by=popularity.desc',
                     title: 'Фільми 18+',
-                    component: 'category',
+                    component: 'category_full',
                     source: 'tmdb',
-                    url: 'discover/movie?with_genres=10749&include_adult=true',
+                    card_type: 'movie',
                     page: 1
                 });
             });
