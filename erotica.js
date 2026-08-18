@@ -22,9 +22,7 @@
                     title: 'Фільми 18+',
                     component: 'category_full',
                     source: 'tmdb',
-                    genres: '10749',
-                    include_adult: 'true',
-                    card_type: 'movie',
+                    url: 'discover/movie?with_keywords=190378|9882&include_adult=true',
                     page: 1
                 });
             });
