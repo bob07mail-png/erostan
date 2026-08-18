@@ -25,8 +25,9 @@
                     source: 'tmdb',
                     card_type: 'movie',
                     page: 1,
-                    url: function (params) {
-                        return 'discover/movie?with_keywords=9840,738,155477,158713,267122,282903&sort_by=popularity.desc&page=' + params.page;
+                    getData: function (params, oncomplite, onerror) {
+                        var url = 'discover/movie?with_keywords=9840,738,155477,158713,267122,282903&sort_by=popularity.desc&page=' + params.page;
+                        Lampa.TMDB.get(url, {}, oncomplite, onerror);
                     }
                 });
             });
