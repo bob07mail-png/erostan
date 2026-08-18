@@ -11,7 +11,8 @@
             var button = $('<li class="menu__item selector" data-action="erotica_movies">' +
                 '<div class="menu__ico">' +
                     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">' +
-                        '<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>' +
+                        '<rect x="2" y="7" width="20" height="15" rx="2" stroke="currentColor"/>' +
+                        '<polyline points="17 2 12 7 7 2" stroke="currentColor"/>' +
                     '</svg>' +
                 '</div>' +
                 '<div class="menu__text">Фільми 18+</div>' +
@@ -19,7 +20,7 @@
 
             button.on('hover:enter', function () {
                 Lampa.Activity.push({
-                    url: 'discover/movie?with_genres=10749&include_adult=true&sort_by=popularity.desc',
+                    url: 'discover/movie?with_genres=10749&sort_by=popularity.desc',
                     title: 'Фільми 18+',
                     component: 'category_full',
                     source: 'tmdb',
